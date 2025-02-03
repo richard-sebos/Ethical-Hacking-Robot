@@ -11,3 +11,4 @@ The goal is to create a **fully autonomous, mobile security auditing bot** that 
 ✅ Operate in a **defense mode**, alerting when security threats are detected.  
 
 [Read more here](https://dev.to/sebos/hacking-robot-needed-raspberry-pi-need-not-apply-49l6)
+[Mastering TCPDump & Python for Ethical Hacking: Network Packet Analysis](https://dev.to/sebos/mastering-tcpdump-python-for-ethical-hacking-network-packet-analysis-2945)
