@@ -45,18 +45,18 @@ These rules ensure SSH is **blocked** by default, and `knockd` dynamically updat
 
 ### **4. Dynamic Port Rotation Script**  
 
-#### **File: `/usr/local/bin/update_knockd_ports.sh`**  
+#### **File: `/usr/local/bin/update_knockd_ports.sh` - [code](SSH/usr/local/bin/update_knockd_ports.sh)**  
 This script **randomizes knock sequences** and updates the `knockd` configuration dynamically.  
 
 ---
 
 ### **5. Automating Port Rotation with systemd**  
 
-#### **File: `/etc/systemd/system/update-knockd.service`**  
+#### **File: `/etc/systemd/system/update-knockd.service` - [code](SSH/etc/systemd/system/update-knockd.service)**  
 This **systemd service** runs the port rotation script.  
 
 
-#### **File: `/etc/systemd/system/update-knockd.timer`**  
+#### **File: `/etc/systemd/system/update-knockd.timer`- [code](SSH/etc/systemd/system/update-knockd.timer)**  
 This **systemd timer** schedules the script to run daily.  
 ``
 
@@ -73,7 +73,7 @@ sudo systemctl status update-knockd.timer
 
 ### **6. Client-Side Knock Script**  
 
-#### **File: `/usr/local/bin/knock_server.sh`**  
+#### **File: `/usr/local/bin/knock_server.sh` - [code](SSH/usr/local/bin/knock_server.sh)**  
 This script allows the client to send the correct knock sequence to **unlock** or **lock** SSH access.  
 
 
