@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 # =========================================================
 # Filename: knock_server.sh
 # Company: Sebos Technology
