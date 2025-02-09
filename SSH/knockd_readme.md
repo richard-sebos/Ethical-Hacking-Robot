@@ -6,14 +6,14 @@ This README provides an overview of the scripts and configurations used in the *
 
 ### **1. Port Knocking Configuration**  
 
-#### **File: `/etc/knockd.conf` - [code](SSH/etc/knockd.conf)**  
+#### **File: `/etc/knockd.conf` - [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/etc/knockd.conf)**  
 This is the main **knockd** configuration file, defining the knock sequences for opening and closing SSH access.  
 
 ---
 
 ### **2. knockd Service Configuration**  
 
-#### **File: `/etc/default/knockd`- [code](SSH/etc/default/knockd)**  
+#### **File: `/etc/default/knockd`- [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/etc/default/knockd)**  
 This file enables `knockd` on startup and specifies the network interface to listen on.  
 
 
@@ -45,18 +45,18 @@ These rules ensure SSH is **blocked** by default, and `knockd` dynamically updat
 
 ### **4. Dynamic Port Rotation Script**  
 
-#### **File: `/usr/local/bin/update_knockd_ports.sh` - [code](SSH/usr/local/bin/update_knockd_ports.sh)**  
+#### **File: `/usr/local/bin/update_knockd_ports.sh` - [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/usr/local/bin/update_knockd_ports.sh)**  
 This script **randomizes knock sequences** and updates the `knockd` configuration dynamically.  
 
 ---
 
 ### **5. Automating Port Rotation with systemd**  
 
-#### **File: `/etc/systemd/system/update-knockd.service` - [code](SSH/etc/systemd/system/update-knockd.service)**  
+#### **File: `/etc/systemd/system/update-knockd.service` - [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/etc/systemd/system/update-knockd.service)**  
 This **systemd service** runs the port rotation script.  
 
 
-#### **File: `/etc/systemd/system/update-knockd.timer`- [code](SSH/etc/systemd/system/update-knockd.timer)**  
+#### **File: `/etc/systemd/system/update-knockd.timer`- [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/etc/systemd/system/update-knockd.timer)**  
 This **systemd timer** schedules the script to run daily.  
 ``
 
@@ -73,7 +73,7 @@ sudo systemctl status update-knockd.timer
 
 ### **6. Client-Side Knock Script**  
 
-#### **File: `/usr/local/bin/knock_server.sh` - [code](SSH/usr/local/bin/knock_server.sh)**  
+#### **File: `/usr/local/bin/knock_server.sh` - [code](https://github.com/richard-sebos/Ethical-Hacking-Robot/blob/main/SSH/usr/local/bin/knock_server.sh)**  
 This script allows the client to send the correct knock sequence to **unlock** or **lock** SSH access.  
 
 
@@ -91,6 +91,4 @@ This README provides an overview of the **Port Knocking** and **Dynamic Port Rot
 
 By following these configurations, you can **harden SSH security** and automate port rotation for **extra protection**. 🚀  
 
----
 
-Let me know if you'd like any refinements! 😊
