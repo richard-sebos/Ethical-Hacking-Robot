@@ -6,14 +6,14 @@ This README provides an overview of the scripts and configurations used in the *
 
 ### **1. Port Knocking Configuration**  
 
-#### **File: `/etc/knockd.conf`(SSH/etc/knockd.conf)**  
+#### **File: `/etc/knockd.conf` - [code](SSH/etc/knockd.conf)**  
 This is the main **knockd** configuration file, defining the knock sequences for opening and closing SSH access.  
 
 ---
 
 ### **2. knockd Service Configuration**  
 
-#### **File: `/etc/default/knockd`(SSH/etc/default/knockd)**  
+#### **File: `/etc/default/knockd`- [code](SSH/etc/default/knockd)**  
 This file enables `knockd` on startup and specifies the network interface to listen on.  
 
 
