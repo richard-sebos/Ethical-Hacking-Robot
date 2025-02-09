@@ -1,0 +1,19 @@
+[Unit]
+Description=Run knockd port update daily
+
+[Timer]
+OnCalendar=00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+root@knocker-build:/etc/systemd/system# cat update-knockd.service
+[Unit]
+Description=Update knockd ports and distribute to clients
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update_knockd_ports.sh
+User=root
