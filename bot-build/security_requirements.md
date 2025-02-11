@@ -1,7 +1,7 @@
 # **Security Requirements Document for Autonomous Robot Firewall**  
 **Version:** 1.0  
-**Date:** *Feb 11, 2025*  
-**Author:** *(Richard Chamberlain / Sebos Technology)*  
+**Date:** *Feb 11, 2025*
+**Author:** *Richard Chamberlain / Sebos Technology*
 
 ---
 
