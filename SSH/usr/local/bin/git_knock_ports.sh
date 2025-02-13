@@ -38,9 +38,10 @@ PORT_FILE="/etc/knockd_ports"
 ENCRYPTED_PORT_FILE="/etc/knockd_ports.gpg"
 
 ## Local repo dir
-GITHUB_REPO_DIR="/root/knockd-ports"
+GITHUB_DIR="/opt/github-sec/"
+REPO="ports"
 SERVICE_ID="OPI0"
-GIT_PORT_PATH=${GITHUB_REPO_DIR}/${SERVER_ID}/knock_ports
+GIT_PORT_PATH=${GITHUB_DIR}/${REPO}/${SERVER_ID}/knock_ports
 
 ## Setup github connection 
 GITHUB_REPO_URL="git@github.com:richard-sebos/knock-ports"
