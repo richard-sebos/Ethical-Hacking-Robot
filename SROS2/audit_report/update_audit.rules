@@ -1,0 +1,26 @@
+# -----------------------------------------------------------------------------
+# 🔹 Monitor execution of critical ROS-related commands to detect build and 
+#    dependency management activity.
+# -----------------------------------------------------------------------------
+-w /usr/bin/colcon       -p x   -k colcon_exec      # Watch execution of 'colcon' (ROS workspace build tool)
+-w /usr/bin/rosdep       -p x   -k rosdep_exec      # Watch execution of 'rosdep' (ROS dependency manager)
+
+# -----------------------------------------------------------------------------
+# 🔹 Monitor changes and execution within the main ROS installation and 
+#    system-wide ROS configuration directories.
+# -----------------------------------------------------------------------------
+-w /opt/ros               -p x    -k ros_exec       # Detect execution of binaries/scripts from the core ROS installation
+-w /etc/ros2              -p wa   -k ros_conf       # Monitor changes (write/attribute) to ROS2 configuration files
+
+# -----------------------------------------------------------------------------
+# 🔹 Monitor changes to the user environment configuration, specifically for 
+#    modifications that may alter ROS environment variables.
+# -----------------------------------------------------------------------------
+-w /home/rosbot/.bashrc   -p wa   -k ros_env        # Monitor user '.bashrc' for changes that might affect environment variables
+
+# -----------------------------------------------------------------------------
+# 🔹 Monitor ROS workspace activities to detect execution of workspace scripts 
+#    and modifications to source code before builds.
+# -----------------------------------------------------------------------------
+-w /home/rosbot/ros2_ws        -p x    -k ros_ws_exec  # Detect execution of scripts/binaries in the workspace root
+-w /home/rosbot/ros2_ws/src    -p wa   -k ros_src      # Monitor changes to source code files (write/attribute changes)
